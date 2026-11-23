@@ -4,199 +4,356 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#14213d">
 <title>Autoservis NIKO s.r.o. – Mnichovice (ukázkový návrh)</title>
 <meta name="description" content="Ukázkový návrh webu pro Autoservis NIKO s.r.o., Ondřejovská 84, Mnichovice. Není oficiální web firmy.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
-    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3.5 17.3a1.8 1.8 0 0 0 2.5 2.5l5.8-5.8a4 4 0 0 0 5.2-5.4l-2.4 2.4-2.2-.4-.4-2.2 2.4-2.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-    <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 16v-3.5l1.8-4.4A2 2 0 0 1 7.7 7h8.6a2 2 0 0 1 1.9 1.1L20 12.5V16M4 16h16M4 16v2h3v-2m10 0v2h3v-2M7.5 13h.01M16.5 13h.01M5.5 11h13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5h2.6l1.3 4-1.8 1.3a11 11 0 0 0 6.5 6.5l1.3-1.8 4 1.3v2.6a1.8 1.8 0 0 1-2 1.8A16 16 0 0 1 4.8 5.5a1.8 1.8 0 0 1 1.8-2Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
     <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2h7L17 8h3v11H4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
-    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5h2.6l1.3 4-1.8 1.3a11 11 0 0 0 6.5 6.5l1.3-1.8 4 1.3v2.6a1.8 1.8 0 0 1-2 1.8A16 16 0 0 1 4.8 5.5a1.8 1.8 0 0 1 1.8-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
     <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8Z" fill="currentColor"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <!-- Technický výkres spojkové lamely -->
+    <symbol id="clutch" viewBox="0 0 200 200">
+      <g fill="none" stroke="currentColor" stroke-width="2.2" class="draw">
+        <circle cx="100" cy="100" r="88"/>
+        <circle cx="100" cy="100" r="68"/>
+        <circle cx="100" cy="100" r="30"/>
+        <circle cx="100" cy="100" r="14"/>
+        <g transform="translate(100 100)">
+          <rect x="-7" y="-60" width="14" height="22" rx="3"/>
+          <rect x="-7" y="-60" width="14" height="22" rx="3" transform="rotate(60)"/>
+          <rect x="-7" y="-60" width="14" height="22" rx="3" transform="rotate(120)"/>
+          <rect x="-7" y="-60" width="14" height="22" rx="3" transform="rotate(180)"/>
+          <rect x="-7" y="-60" width="14" height="22" rx="3" transform="rotate(240)"/>
+          <rect x="-7" y="-60" width="14" height="22" rx="3" transform="rotate(300)"/>
+        </g>
+      </g>
+      <g fill="none" stroke="currentColor">
+        <circle cx="100" cy="100" r="19" stroke-width="5" stroke-dasharray="2.6 2.4"/>
+        <circle cx="100" cy="100" r="78" stroke-width="3.5" stroke-dasharray="0.1 10.2" stroke-linecap="round"/>
+      </g>
+      <g stroke="currentColor" stroke-width=".9" stroke-dasharray="10 3 2 3" opacity=".55">
+        <path d="M100 2v196M2 100h196"/>
+      </g>
+    </symbol>
+    <symbol id="wear" viewBox="0 0 200 200">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M40 60q8-6 14-2M150 52q6 4 10 12M160 128q-4 8-12 12M52 150q-8-6-10-14M120 24q8 2 14 6M70 176q-8-2-14-6"/>
+        <path d="M30 96q2-10 6-16M170 100q-2 10-6 16"/>
+      </g>
+    </symbol>
+
+    <!-- Profil auta pro opravy po nehodě -->
+    <symbol id="car" viewBox="0 0 260 130">
+      <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" class="draw">
+        <path d="M14 92V72q2-12 22-15l40-4 30-27q8-6 20-6h50q12 0 20 8l25 26q22 3 24 16v22Z"/>
+        <path d="M84 53h66V28m0 25h50"/>
+        <circle cx="66" cy="96" r="20"/><circle cx="66" cy="96" r="8"/>
+        <circle cx="206" cy="96" r="20"/><circle cx="206" cy="96" r="8"/>
+      </g>
+      <g fill="none" stroke="currentColor" stroke-width="1.6">
+        <circle cx="238" cy="72" r="17" stroke-dasharray="4 4"/>
+        <path d="M252 58l8-10h-30" />
+      </g>
+    </symbol>
   </defs>
 </svg>
 
-<div class="demo-strip" role="note">Ukázkový návrh nového webu pro Autoservis NIKO – není oficiální web firmy</div>
+<a class="skip" href="#obsah">Přeskočit na obsah</a>
+<div class="demo-strip" role="note">Ukázkový návrh nového webu pro Autoservis NIKO – <strong>není oficiální web firmy</strong></div>
 
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="Autoservis NIKO – na začátek stránky">
-      <span class="brand-mark" aria-hidden="true">NIKO</span>
-      <span class="brand-sub">Autoservis · Mnichovice</span>
+      <span class="plate plate-sm" aria-hidden="true"><span class="plate-eu">CZ</span><span class="plate-txt">NIKO</span></span>
+      <span class="brand-sub">Autoservis<br>Mnichovice</span>
     </a>
-    <nav class="header-actions" aria-label="Rychlé akce">
+    <nav class="header-nav" aria-label="Hlavní">
+      <a href="#sluzby">Opravy</a>
+      <a href="#postup">Postup</a>
+      <a href="#fotky">Fotky</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="header-actions">
       <a class="link-call" href="tel:+420725770943"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span>Zavolat</span></a>
       <a class="btn btn-primary btn-sm" href="#objednat">Objednat termín</a>
-    </nav>
+    </div>
   </div>
 </header>
 
 <main id="top">
+  <span id="obsah" tabindex="-1"></span>
+
+  <!-- ============ HERO ============ -->
   <section class="hero" aria-labelledby="hero-h">
     <div class="wrap hero-grid">
       <div class="hero-text">
-        <p class="hero-place">Ondřejovská 84, Mnichovice</p>
-        <h1 id="hero-h">Servis, který vám napíše cenu předem a&nbsp;pošle fotky z&nbsp;opravy</h1>
-        <p class="lead">Mechanické opravy a opravy po drobných nehodách. Než sáhneme na auto, víte, co se bude dělat a kolik to bude stát.</p>
+        <p class="hero-place"><span class="status" id="status-hero">Ondřejovská 84, Mnichovice</span></p>
+        <h1 id="hero-h">Cenu znáte předem. <span class="h1-2">Fotky z&nbsp;opravy dostanete.</span></h1>
+        <p class="lead">Autoservis NIKO v Mnichovicích. Mechanické opravy a opravy po drobných nehodách. Ještě než se pustíme do práce, řekneme vám, co budeme dělat a kolik to bude stát.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#objednat">Objednat termín</a>
-          <a class="text-link" href="tel:+420725770943">nebo volejte 725&nbsp;770&nbsp;943</a>
+          <a class="btn btn-primary" href="#objednat">Objednat termín <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="text-link" href="tel:+420725770943">nebo volejte <strong>725&nbsp;770&nbsp;943</strong></a>
         </div>
-        <p class="rating"><svg class="ico star" aria-hidden="true"><use href="#i-star"/></svg><strong>4,3</strong> na Google · 16 recenzí</p>
+        <a class="rating" href="https://www.google.com/maps/search/?api=1&amp;query=Autoservis%20NIKO%20Mnichovice" target="_blank" rel="noopener">
+          <span class="stars" aria-hidden="true"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><span class="star-part"><svg class="ico"><use href="#i-star"/></svg><span class="star-fill"><svg class="ico"><use href="#i-star"/></svg></span></span></span>
+          <span><strong>4,3</strong> na Google · 16&nbsp;recenzí</span>
+        </a>
       </div>
 
-      <!-- Podpisový prvek: zakázkový list – vyplněný jen tím, co víme jistě -->
-      <figure class="ticket" aria-label="Ukázka zakázkového listu">
-        <div class="ticket-head">
-          <span>Zakázkový list</span>
-          <span class="mono">NIKO · Mnichovice</span>
+      <!-- Hlavní prvek: zakázkový list. Ilustrace postupu, ne skutečná zakázka. -->
+      <figure class="ticket" aria-labelledby="ticket-cap">
+        <div class="ticket-paper">
+          <div class="ticket-head">
+            <div>
+              <p class="ticket-title">Zakázkový list</p>
+              <p class="ticket-firm">Autoservis NIKO s.r.o. · Ondřejovská 84</p>
+            </div>
+            <span class="plate plate-xs" aria-label="SPZ ilustrační"><span class="plate-eu">CZ</span><span class="plate-txt">1A2 3456</span></span>
+          </div>
+          <dl class="ticket-rows">
+            <div><dt>Závada</dt><dd class="hand">prokluzuje spojka</dd></div>
+            <div><dt>Rozsah práce</dt><dd class="hand">výměna spojky <span class="tick" aria-hidden="true">✓</span></dd></div>
+            <div><dt>Cena</dt><dd class="hand">sdělena předem <span class="tick" aria-hidden="true">✓</span></dd></div>
+            <div><dt>Foto</dt><dd class="thumbs">
+              <span class="thumb"><svg aria-hidden="true"><use href="#clutch"/></svg><svg class="wear-l" aria-hidden="true"><use href="#wear"/></svg></span>
+              <span class="thumb"><svg aria-hidden="true"><use href="#clutch"/></svg></span>
+              <span class="thumb thumb-cam"><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg></span>
+            </dd></div>
+          </dl>
         </div>
-        <dl class="ticket-rows">
-          <div><dt>Rozsah práce</dt><dd>domluven předem</dd></div>
-          <div><dt>Cena</dt><dd>sdělena před opravou</dd></div>
-          <div><dt>Fotodokumentace</dt><dd class="photos">
-            <span class="ph"><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg></span>
-            <span class="ph"><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg></span>
-            <span class="ph"><svg class="ico" aria-hidden="true"><use href="#i-camera"/></svg></span>
-          </dd></div>
-        </dl>
-        <figcaption class="ticket-foot">Ilustrace postupu, ne skutečná zakázka.</figcaption>
+        <div class="stamp stamp-hero" aria-hidden="true"><span>Cena</span>odsouhlasena</div>
+        <figcaption id="ticket-cap">Ilustrace postupu, ne skutečná zakázka</figcaption>
       </figure>
     </div>
   </section>
 
+  <!-- ============ SLUŽBY ============ -->
   <!-- OVĚŘIT S MAJITELEM: rozsah služeb je odvozen z veřejných recenzí -->
   <section class="services" id="sluzby" aria-labelledby="sluzby-h">
     <div class="wrap">
-      <h2 id="sluzby-h">S čím přijet</h2>
-      <ul class="service-list">
-        <li class="service">
-          <svg class="ico ico-lg" aria-hidden="true"><use href="#i-wrench"/></svg>
-          <div>
-            <h3>Mechanické opravy</h3>
-            <p>Mechanické závady, například výměna spojky.</p>
-            <a class="text-link" href="#objednat" data-preselect="Mechanická oprava">Objednat mechanickou opravu</a>
-          </div>
-        </li>
-        <li class="service">
-          <svg class="ico ico-lg" aria-hidden="true"><use href="#i-car"/></svg>
-          <div>
-            <h3>Opravy po drobných nehodách</h3>
-            <p>Drobné škody po nehodě. Nejdřív se podíváme, pak řekneme cenu.</p>
-            <a class="text-link" href="#objednat" data-preselect="Oprava po nehodě">Objednat opravu po nehodě</a>
-          </div>
-        </li>
-        <li class="service service-note">
-          <svg class="ico ico-lg" aria-hidden="true"><use href="#i-phone"/></svg>
-          <div>
-            <h3>Něco jiného?</h3>
-            <p>Zavolejte a popište, co auto dělá. Řekneme vám, jestli to opravíme.</p>
-            <a class="text-link" href="tel:+420725770943">725&nbsp;770&nbsp;943</a>
-          </div>
-        </li>
-      </ul>
+      <div class="sec-head">
+        <h2 id="sluzby-h">Co u nás opravíte</h2>
+        <p>Dvě věci, se kterými k nám lidé jezdí nejčastěji. Jestli máte jiný problém, zavolejte a domluvíme se.</p>
+      </div>
+
+      <article class="svc">
+        <div class="svc-draw blueprint">
+          <svg class="drawing" viewBox="0 0 200 200" role="img" aria-label="Technický výkres spojkové lamely"><use href="#clutch"/></svg>
+          <span class="dim dim-a" aria-hidden="true">Ø lamela</span>
+          <span class="dim dim-b" aria-hidden="true">pol. 01</span>
+        </div>
+        <div class="svc-body">
+          <p class="svc-no" aria-hidden="true">Položka 01</p>
+          <h3>Mechanické opravy</h3>
+          <p>Když auto nejede, jak má. Třeba spojka, která prokluzuje nebo špatně zabírá. Podíváme se, co je za tím, řekneme vám, co je potřeba vyměnit, a teprve potom opravujeme.</p>
+          <a class="btn btn-ghost" href="#objednat" data-preselect="Mechanická oprava">Objednat mechanickou opravu</a>
+        </div>
+      </article>
+
+      <article class="svc svc-rev">
+        <div class="svc-draw blueprint">
+          <svg class="drawing drawing-car" viewBox="0 0 260 130" role="img" aria-label="Nákres auta s vyznačeným poškozením na předku"><use href="#car"/></svg>
+          <span class="dim dim-a" aria-hidden="true">poškozené místo</span>
+          <span class="dim dim-b" aria-hidden="true">pol. 02</span>
+        </div>
+        <div class="svc-body">
+          <p class="svc-no" aria-hidden="true">Položka 02</p>
+          <h3>Opravy po drobných nehodách</h3>
+          <p>Menší ťukanec nebo poškozený díl. Prohlédneme poškození, řekneme vám rozsah opravy i cenu a celou opravu nafotíme.</p>
+          <a class="btn btn-ghost" href="#objednat" data-preselect="Oprava po nehodě">Objednat opravu po nehodě</a>
+        </div>
+      </article>
+
+      <p class="svc-other">Něco jiného? <a href="tel:+420725770943">Zavolejte 725&nbsp;770&nbsp;943</a> a popište, co auto dělá.</p>
     </div>
   </section>
 
-  <section class="steps" aria-labelledby="steps-h">
+  <!-- ============ POSTUP ============ -->
+  <section class="steps" id="postup" aria-labelledby="steps-h">
     <div class="wrap">
-      <h2 id="steps-h">Jak to probíhá</h2>
-      <ol class="step-list">
-        <li><span class="step-no" aria-hidden="true">01</span><h3>Zavoláte</h3><p>Popíšete, co se s autem děje, a domluvíme termín.</p></li>
-        <li><span class="step-no" aria-hidden="true">02</span><h3>Domluvíme cenu a&nbsp;rozsah</h3><p>Ještě před opravou víte, co se bude dělat a kolik to bude stát.</p></li>
-        <li><span class="step-no" aria-hidden="true">03</span><h3>Oprava</h3><p>Pracujeme v rozsahu, na kterém jsme se dohodli.</p></li>
-        <li><span class="step-no" aria-hidden="true">04</span><h3>Fotodokumentace</h3><p>Opravu nafotíme, takže vidíte, co se na autě udělalo.</p></li>
+      <div class="sec-head sec-head-inv">
+        <h2 id="steps-h">Od telefonátu po fotky</h2>
+        <p>Žádná překvapení na konci. Každý krok víte dopředu.</p>
+      </div>
+      <ol class="step-list" id="step-list">
+        <li>
+          <span class="node" aria-hidden="true">1</span>
+          <h3>Zavoláte</h3>
+          <p>Popíšete, co auto dělá, a domluvíme si termín.</p>
+        </li>
+        <li>
+          <span class="node" aria-hidden="true">2</span>
+          <h3>Domluvíme cenu a&nbsp;rozsah</h3>
+          <p>Před opravou víte, co se bude dělat a kolik to bude stát.</p>
+          <span class="stamp stamp-step" aria-hidden="true"><span>Cena</span>odsouhlasena</span>
+        </li>
+        <li>
+          <span class="node" aria-hidden="true">3</span>
+          <h3>Oprava</h3>
+          <p>Opravujeme jen to, na čem jsme se dohodli.</p>
+        </li>
+        <li>
+          <span class="node" aria-hidden="true">4</span>
+          <h3>Fotodokumentace</h3>
+          <p>Opravu nafotíme, takže vidíte, co se na autě dělalo.</p>
+          <span class="mini-frames" aria-hidden="true"><i></i><i></i><i></i></span>
+        </li>
       </ol>
     </div>
   </section>
 
+  <!-- ============ FOTODOKUMENTACE ============ -->
+  <section class="photos" id="fotky" aria-labelledby="fotky-h">
+    <div class="wrap photos-grid">
+      <div class="photos-text">
+        <h2 id="fotky-h">Uvidíte, co se pod kapotou dělo</h2>
+        <p>Opravu dokumentujeme fotkami. Nemusíte nám věřit na slovo. Na fotkách uvidíte, co bylo špatně a co se vyměnilo.</p>
+        <p class="note">Níže je jen nákres. Skutečné fotky vašeho auta pořídí servis.</p>
+      </div>
+      <div class="filmstrip" role="list" aria-label="Ukázka fotodokumentace ve třech krocích">
+        <figure class="frame" role="listitem">
+          <div class="frame-img"><svg aria-hidden="true"><use href="#clutch"/></svg><svg class="wear-l" aria-hidden="true"><use href="#wear"/></svg></div>
+          <figcaption><span class="mono">01</span> Před opravou</figcaption>
+        </figure>
+        <figure class="frame" role="listitem">
+          <div class="frame-img frame-split"><svg aria-hidden="true"><use href="#clutch"/></svg><svg class="wear-l" aria-hidden="true"><use href="#wear"/></svg><svg aria-hidden="true"><use href="#clutch"/></svg></div>
+          <figcaption><span class="mono">02</span> Starý a nový díl</figcaption>
+        </figure>
+        <figure class="frame" role="listitem">
+          <div class="frame-img"><svg aria-hidden="true"><use href="#clutch"/></svg><span class="ok" aria-hidden="true">✓</span></div>
+          <figcaption><span class="mono">03</span> Hotovo</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OBJEDNÁNÍ ============ -->
   <section class="booking" id="objednat" aria-labelledby="book-h">
     <div class="wrap booking-grid">
       <div class="booking-intro">
         <h2 id="book-h">Objednat termín</h2>
-        <p>Vyberte službu, den a čas. Servis se vám ozve a termín potvrdí.</p>
-        <p class="muted">Raději telefonem? <a href="tel:+420725770943">725&nbsp;770&nbsp;943</a></p>
+        <p>Vyplňte stejný list, který by u nás vznikl po telefonu. Servis se vám ozve a termín potvrdí.</p>
+        <p class="muted">Raději telefonem? <a class="inline-tel" href="tel:+420725770943">725&nbsp;770&nbsp;943</a></p>
+        <p class="hours-box"><span class="status" id="status-book">Po–Pá do 16:00</span></p>
       </div>
 
-      <form class="book-form" id="book-form" novalidate>
-        <p class="demo-label">Demo – rezervace se nikam neodesílá</p>
+      <form class="order" id="book-form" novalidate aria-describedby="demo-note">
+        <div class="order-head">
+          <div>
+            <p class="order-title">Objednávka termínu</p>
+            <p class="order-firm">Autoservis NIKO s.r.o. · Mnichovice</p>
+          </div>
+          <p class="demo-label" id="demo-note">Demo – nic se neodesílá</p>
+        </div>
 
-        <fieldset>
-          <legend>Služba</legend>
+        <fieldset class="row">
+          <legend><span class="row-no">1</span>Služba</legend>
           <div class="chips">
-            <label class="chip"><input type="radio" name="service" value="Mechanická oprava" required> Mechanická oprava</label>
+            <label class="chip"><input type="radio" name="service" value="Mechanická oprava"> Mechanická oprava</label>
             <label class="chip"><input type="radio" name="service" value="Oprava po nehodě"> Oprava po nehodě</label>
-            <label class="chip"><input type="radio" name="service" value="Jiné – upřesním"> Jiné – upřesním</label>
+            <label class="chip"><input type="radio" name="service" value="Jiné – upřesním po telefonu"> Jiné – upřesním</label>
           </div>
           <p class="err" id="err-service" hidden>Vyberte službu.</p>
         </fieldset>
 
-        <fieldset>
-          <legend>Den <span class="muted">(Po–Pá)</span></legend>
-          <div class="chips days" id="days"></div>
+        <fieldset class="row">
+          <legend><span class="row-no">2</span>Den <span class="muted">(Po–Pá)</span></legend>
+          <div class="days" id="days"></div>
           <p class="err" id="err-day" hidden>Vyberte den.</p>
         </fieldset>
 
-        <div class="field">
-          <label for="time">Čas</label>
-          <select id="time" name="time" required aria-describedby="err-time">
-            <option value="">Vyberte čas</option>
-          </select>
+        <fieldset class="row">
+          <legend><span class="row-no">3</span>Čas <span class="muted">(8–16 h)</span></legend>
+          <div class="slots" id="slots"><p class="muted slot-hint">Nejdřív vyberte den.</p></div>
           <p class="err" id="err-time" hidden>Vyberte čas.</p>
-        </div>
+        </fieldset>
 
-        <div class="field-row">
-          <div class="field">
-            <label for="name">Jméno</label>
-            <input id="name" name="name" autocomplete="name" required aria-describedby="err-name">
-            <p class="err" id="err-name" hidden>Vyplňte jméno.</p>
+        <div class="row row-fields">
+          <p class="legend-like"><span class="row-no">4</span>Kontakt</p>
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Jméno</label>
+              <input id="name" name="name" autocomplete="name" aria-describedby="err-name">
+              <p class="err" id="err-name" hidden>Vyplňte jméno.</p>
+            </div>
+            <div class="field">
+              <label for="phone">Telefon</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="err-phone">
+              <p class="err" id="err-phone" hidden>Zadejte telefon (aspoň 9 číslic).</p>
+            </div>
           </div>
-          <div class="field">
-            <label for="phone">Telefon</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="err-phone">
-            <p class="err" id="err-phone" hidden>Zadejte telefon (aspoň 9 číslic).</p>
+          <div class="field field-spz">
+            <label for="spz">SPZ <span class="muted">(nepovinné)</span></label>
+            <div class="spz-wrap">
+              <span class="plate plate-input" aria-hidden="true"><span class="plate-eu">CZ</span><span class="plate-txt" id="plate-live">&nbsp;</span></span>
+              <input id="spz" name="spz" autocomplete="off" maxlength="8" spellcheck="false" placeholder="např. 1A2 3456">
+            </div>
           </div>
         </div>
 
-        <div class="field">
-          <label for="spz">SPZ <span class="muted">(nepovinné)</span></label>
-          <input id="spz" name="spz" autocomplete="off" maxlength="10" class="spz-input">
+        <div class="order-foot">
+          <p class="summary" id="summary" aria-live="polite">Zatím nic nevybráno</p>
+          <button class="btn btn-primary" type="submit">Odeslat poptávku</button>
         </div>
 
-        <button class="btn btn-primary btn-block" type="submit">Odeslat poptávku termínu</button>
-
-        <div class="result" id="result" role="status" aria-live="polite" hidden></div>
+        <div class="result" id="result" role="status" aria-live="polite" tabindex="-1" hidden></div>
       </form>
     </div>
   </section>
 
+  <!-- ============ KONTAKT ============ -->
   <section class="contact" id="kontakt" aria-labelledby="kontakt-h">
-    <div class="wrap contact-grid">
+    <div class="wrap">
       <h2 id="kontakt-h">Kontakt</h2>
-      <dl class="contact-list">
-        <div><dt>Adresa</dt><dd>Autoservis NIKO s.r.o.<br>Ondřejovská 84<br>251 64 Mnichovice<br><a class="text-link" href="https://mapy.com/cs/?q=Ond%C5%99ejovsk%C3%A1%2084%2C%20Mnichovice" target="_blank" rel="noopener">Otevřít na Mapy.com</a></dd></div>
-        <div><dt>Telefon</dt><dd><a class="big-phone" href="tel:+420725770943">725&nbsp;770&nbsp;943</a></dd></div>
-        <!-- OVĚŘIT OTEVÍRACÍ DOBU: zdroje uvádějí začátek 7:00 nebo 8:00 -->
-        <div><dt>Otevřeno</dt><dd><span id="hours">Po–Pá do 16:00</span><br><span class="muted">So–Ne zavřeno</span></dd></div>
-      </dl>
+      <div class="contact-grid">
+        <a class="call-card" href="tel:+420725770943">
+          <span class="call-label">Zavolejte</span>
+          <span class="call-num">725&nbsp;770&nbsp;943</span>
+          <span class="call-hint"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Nejrychlejší cesta k termínu</span>
+        </a>
+        <dl class="contact-list">
+          <div>
+            <dt>Adresa</dt>
+            <dd>Autoservis NIKO s.r.o.<br>Ondřejovská 84<br>251 64 Mnichovice<br>
+              <a class="text-link" href="https://mapy.com/cs/?q=Ond%C5%99ejovsk%C3%A1%2084%2C%20Mnichovice" target="_blank" rel="noopener">Navigovat přes Mapy.com</a></dd>
+          </div>
+          <!-- OVĚŘIT OTEVÍRACÍ DOBU: zdroje uvádějí začátek 7:00 nebo 8:00, konec 16:00 -->
+          <div>
+            <dt>Otevřeno</dt>
+            <dd>
+              <ul class="week" id="week">
+                <li data-d="1">Po</li><li data-d="2">Út</li><li data-d="3">St</li><li data-d="4">Čt</li><li data-d="5">Pá</li><li data-d="6" class="closed">So</li><li data-d="0" class="closed">Ne</li>
+              </ul>
+              <p class="week-txt"><strong>Po–Pá do 16:00</strong><br><span class="muted">So–Ne zavřeno</span></p>
+              <p class="status" id="status-contact"></p>
+            </dd>
+          </div>
+        </dl>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="wrap">
-    <p>Ukázkový návrh vytvořil Lukáš Texl, není oficiální web firmy.</p>
-    <p class="muted-inv">Údaje převzaty z veřejných zdrojů. Hodnocení: Google, 4,3 z 16 recenzí.</p>
+  <div class="wrap footer-inner">
+    <span class="plate plate-sm plate-inv" aria-hidden="true"><span class="plate-eu">CZ</span><span class="plate-txt">NIKO</span></span>
+    <div>
+      <p><strong>Ukázkový návrh vytvořil Lukáš Texl, není oficiální web firmy.</strong></p>
+      <p class="muted-inv">Údaje jsou převzaté z veřejných zdrojů. Hodnocení: Google, 4,3 z 16 recenzí. Nákresy jsou ilustrační.</p>
+    </div>
   </div>
 </footer>
 
-<a class="call-bar" href="tel:+420725770943"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Zavolat 725&nbsp;770&nbsp;943</a>
+<a class="call-bar" id="call-bar" href="tel:+420725770943"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Zavolat 725&nbsp;770&nbsp;943</a>
 
 <script src="script.js"></script>
 </body>

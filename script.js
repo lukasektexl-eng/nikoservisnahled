@@ -39,7 +39,7 @@
     { m: [2, 3], h: 'Přezutí na letní pneumatiky', p: 'Přezujeme, vyvážíme kola a zimní sadu vám můžeme uskladnit. Prodáváme i nové a jeté pneu.', s: 'Pneuservis', i: 'i-tyre' },
     { m: [11, 0, 1], h: 'Svítí kontrolka?', p: 'Diagnostikou zjistíme přesnou příčinu závady, vyčteme a smažeme chybová hlášení.', s: 'Diagnostika', i: 'i-diag' },
     { m: [4, 5, 6, 7], h: 'Servis před cestou na dovolenou', p: 'Olej, filtry, brzdová kapalina a kontrola podle servisních intervalů vašeho auta.', s: 'Pravidelný servis', i: 'i-oil' },
-    { m: [8], h: 'Blíží se STK?', p: 'Celé auto zkontrolujeme ještě před technickou kontrolou, ať vás na STK nic nepřekvapí.', s: 'Příprava na STK', i: 'i-stk' },
+    { m: [8], h: 'Blíží se STK?', p: 'Kompletní kontrola vozidla ještě před technickou kontrolou.', s: 'Příprava na STK', i: 'i-stk' },
   ];
   const sz = seasons.find(x => x.m.includes(mo));
   if (sz) {

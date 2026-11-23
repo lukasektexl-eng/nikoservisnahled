@@ -8,7 +8,7 @@
   const SHORT = ['Ne','Po','Út','St','Čt','Pá','So'];
 
   /* ---------- Čas v Praze + stav otevřeno/zavřeno ---------- */
-  // OVĚŘIT OTEVÍRACÍ DOBU – začátek (7:00/8:00) není jistý, proto ho neuvádíme.
+  // Otevírací doba dle autoservis-niko.cz: Po–Pá 7:00–16:00 (OVĚŘIT – Firmy.cz uvádí 15:30)
   const prague = () => {
     const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Prague', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false })
       .formatToParts(new Date()).reduce((o, p) => (o[p.type] = p.value, o), {});
@@ -19,9 +19,9 @@
   const workday = t.wd >= 1 && t.wd <= 5;
   const nextOpen = () => (t.wd === 5 || t.wd === 6 || t.wd === 0) ? 'v pondělí' : 'zítra';
   let statusTxt, open = false;
-  if (workday && t.h < 16 && t.h >= 8) { statusTxt = 'Teď otevřeno · do 16:00'; open = true; }
-  else if (workday && t.h < 8) statusTxt = 'Dnes otevřeno do 16:00';
-  else statusTxt = `Teď zavřeno · otevíráme ${nextOpen()}`;
+  if (workday && t.h < 16 && t.h >= 7) { statusTxt = 'Teď otevřeno · do 16:00'; open = true; }
+  else if (workday && t.h < 7) statusTxt = 'Teď zavřeno · otevíráme v 7:00';
+  else statusTxt = `Teď zavřeno · otevíráme ${nextOpen()} v 7:00`;
   ['status-hero', 'status-book', 'status-contact'].forEach(id => {
     const el = document.getElementById(id); if (!el) return;
     if (id === 'status-hero') el.textContent = `${statusTxt} · Ondřejovská 84, Mnichovice`;
@@ -30,6 +30,26 @@
   });
   const todayLi = document.querySelector(`#week li[data-d="${t.wd}"]`);
   if (todayLi) { todayLi.classList.add('today'); todayLi.setAttribute('aria-label', `${SHORT[t.wd]} – dnes`); }
+
+  /* ---------- Sezónní tip ---------- */
+  const MONTHS = ['Leden','Únor','Březen','Duben','Květen','Červen','Červenec','Srpen','Září','Říjen','Listopad','Prosinec'];
+  const mo = new Date().getMonth();
+  const seasons = [
+    { m: [9, 10], h: 'Přezutí na zimní pneumatiky', p: 'Přezujeme, vyvážíme kola a letní sadu vám můžeme uskladnit. Prodáváme i nové a jeté pneu.', s: 'Pneuservis', i: 'i-tyre' },
+    { m: [2, 3], h: 'Přezutí na letní pneumatiky', p: 'Přezujeme, vyvážíme kola a zimní sadu vám můžeme uskladnit. Prodáváme i nové a jeté pneu.', s: 'Pneuservis', i: 'i-tyre' },
+    { m: [11, 0, 1], h: 'Svítí kontrolka?', p: 'Diagnostikou zjistíme přesnou příčinu závady, vyčteme a smažeme chybová hlášení.', s: 'Diagnostika', i: 'i-diag' },
+    { m: [4, 5, 6, 7], h: 'Servis před cestou na dovolenou', p: 'Olej, filtry, brzdová kapalina a kontrola podle servisních intervalů vašeho auta.', s: 'Pravidelný servis', i: 'i-oil' },
+    { m: [8], h: 'Blíží se STK?', p: 'Celé auto zkontrolujeme ještě před technickou kontrolou, ať vás na STK nic nepřekvapí.', s: 'Příprava na STK', i: 'i-stk' },
+  ];
+  const sz = seasons.find(x => x.m.includes(mo));
+  if (sz) {
+    document.getElementById('season-month').textContent = `${MONTHS[mo]} · tip ze servisu`;
+    document.getElementById('season-h').textContent = sz.h;
+    document.getElementById('season-p').textContent = sz.p;
+    const sb = document.getElementById('season-btn');
+    sb.dataset.preselect = sz.s; sb.textContent = `Objednat: ${sz.s.toLowerCase()}`;
+    document.querySelector('.season-ico use').setAttribute('href', '#' + sz.i);
+  }
 
   /* ---------- Objednávka ---------- */
   const form = document.getElementById('book-form');
@@ -61,7 +81,7 @@
   }
   function renderSlots() {
     slotsEl.innerHTML = '';
-    for (let h = 8; h < 16; h++) for (const m of ['00', '30']) {
+    for (let h = 7; h < 16; h++) for (const m of ['00', '30']) {
       const v = `${h}:${m}`;
       const b = document.createElement('button');
       b.type = 'button'; b.className = 'slot'; b.textContent = v;

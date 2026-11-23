@@ -360,28 +360,22 @@ legend+*{clear:both}
 }
 
 /* ---------- Položka 02: výkres karoserie s poškozeními ---------- */
-.svc-draw-body{display:flex;flex-direction:column;justify-content:center;gap:18px;padding:48px 28px 44px}
-.car-bp{width:100%;max-width:520px;height:auto;align-self:center;overflow:visible}
-.dmg{--c:#ff8a7f}
-.dmg-area{fill:rgba(255,138,127,.16);stroke:none}
-.dmg-hatch,.dmg-scratch{fill:none;stroke:var(--c);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.dmg-rust circle{fill:#ffb36b}
-.dmg-ring{fill:none;stroke:var(--c);stroke-width:1.6;stroke-dasharray:5 4;transition:stroke-width .2s}
-.dmg-tag path{stroke:var(--c);stroke-width:1.4;fill:none}
-.dmg-tag circle{fill:var(--c);stroke:none;transition:r .2s}
-.dmg-tag text{fill:var(--navy);font:800 13px var(--display);text-anchor:middle}
+.svc-draw-body{display:flex;flex-direction:column;justify-content:center;gap:14px;padding:44px 20px 40px}
+.car-bp{width:100%;max-width:600px;height:auto;align-self:center;overflow:visible}
 .dmg{cursor:pointer}
-.dmg.hl .dmg-ring{stroke-width:3;stroke-dasharray:none}
-.dmg.hl .dmg-tag circle{r:14}
-.dmg-legend{list-style:none;margin:0;padding:0;display:grid;gap:2px;width:100%;max-width:520px;align-self:center}
+.dmg-ring{transition:stroke-width .2s}
+.dmg-dot{transition:r .2s}
+.dmg.hl .dmg-ring{stroke-width:3.2;stroke-dasharray:none}
+.dmg.hl .dmg-dot{r:16}
+.dmg-legend{display:grid;gap:4px;width:100%;max-width:560px;align-self:center}
 .dmg-legend button{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:8px 10px;border:1px solid transparent;border-radius:2px;background:none;color:#d7e3f5;cursor:pointer;min-height:48px;font:inherit;font-size:.98rem;line-height:1.35}
 .dmg-legend button:hover,.dmg-legend button.hl{background:rgba(255,255,255,.08)}
 .dmg-legend button[aria-pressed="true"]{background:rgba(255,138,127,.16);border-color:rgba(255,138,127,.6)}
 .dmg-legend b{color:#fff;font-weight:600}
 .dmg-no{flex:none;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#ff8a7f;color:var(--navy);font:800 .8rem var(--display)}
 /* postupné objevení poškození */
-.js-anim .car-bp .dmg{opacity:0;transform:scale(.9);transform-box:fill-box;transform-origin:center;transition:opacity .4s,transform .4s}
-.js-anim .car-bp.is-drawn .dmg{opacity:1;transform:none}
+.js-anim .car-bp .dmg{opacity:0;transition:opacity .5s}
+.js-anim .car-bp.is-drawn .dmg{opacity:1}
 .js-anim .car-bp.is-drawn .dmg[data-dmg="1"]{transition-delay:1.2s}
 .js-anim .car-bp.is-drawn .dmg[data-dmg="2"]{transition-delay:1.5s}
 .js-anim .car-bp.is-drawn .dmg[data-dmg="3"]{transition-delay:1.8s}

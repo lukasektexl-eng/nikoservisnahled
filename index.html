@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -187,59 +187,73 @@
       <article class="svc svc-rev">
         <div class="svc-draw svc-draw-body blueprint">
           <span class="dim dim-a" aria-hidden="true">karoserie · lak · koroze</span>
-          <svg class="drawing car-bp" viewBox="0 0 480 215" role="img" aria-labelledby="car-t">
-            <title id="car-t">Nákres auta z boku se třemi vyznačenými místy: promáčklina na předním blatníku, poškrábaný lak na předních dveřích a koroze na zadním podběhu</title>
-            <g class="draw" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
-              <!-- karoserie -->
-              <path d="M40 160 L36 140 Q36 120 44 112 L108 103 Q130 84 156 72 Q170 66 190 65 L292 65 Q306 66 318 74 L356 100 L428 108 Q446 112 452 124 L456 146 Q456 158 448 160 L406 160 A36 36 0 0 0 334 160 L146 160 A36 36 0 0 0 74 160 Z"/>
+          <svg class="drawing car-bp" viewBox="0 0 620 250" role="img" aria-labelledby="car-t" style="color:#bcd3f5">
+            <title id="car-t">Nákres auta z boku se třemi vyznačenými místy: promáčklina na předním blatníku, poškrábaný lak na předních dveřích a rez na zadním podběhu</title>
+            <!-- kótování -->
+            <g fill="none" stroke="currentColor" stroke-width="1" opacity=".45">
+              <path d="M30 222 H590"/>
+              <path d="M135 236 H455 M135 230 v12 M455 230 v12" />
+              <path d="M135 140 v98 M455 140 v98" stroke-dasharray="9 3 2 3"/>
+            </g>
+            <g class="draw" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+              <!-- obrys karoserie (hatchback) -->
+              <path d="M66 180 L58 152 C54 130 60 114 72 106 L94 92 C124 74 172 60 232 56 L330 54 C370 54 398 64 426 86 L452 106 C500 110 538 116 556 128 C566 136 570 152 568 170 L562 180 L503 180 A48 48 0 0 0 407 180 L183 180 A48 48 0 0 0 87 180 Z"/>
               <!-- okna -->
-              <path d="M120 102 Q138 86 160 76 Q172 72 186 72 L218 72 L218 102 Z"/>
-              <path d="M228 72 L290 72 Q302 73 312 80 L338 101 L228 102 Z"/>
-              <!-- linie dveří, práh, prolis -->
-              <path d="M223 72 L223 158 M342 103 L340 158 M136 104 Q132 130 142 158 M108 112 L452 120"/>
-              <!-- kliky, zrcátko, světla -->
-              <path d="M190 116 h16 M306 116 h16 M338 96 l14 -2 l2 8 l-12 1 Z M432 112 q14 2 18 12 l-14 -1 Z M38 122 l12 -1 l1 12 l-12 1 Z"/>
+              <path d="M112 98 C140 80 170 70 200 66 L200 100 L112 100 Z"/>
+              <path d="M210 65 L296 63 L296 100 L210 100 Z"/>
+              <path d="M306 63 L330 62 C358 62 384 70 406 86 L420 100 L306 100 Z"/>
+              <!-- ramenní linie, dveře, práh -->
+              <path d="M66 122 C200 116 400 116 518 120"/>
+              <path d="M301 62 L301 177"/>
+              <path d="M205 100 C200 126 192 146 186 162"/>
+              <path d="M426 102 C432 128 432 156 428 176"/>
+              <path d="M190 172 L404 172" opacity=".6"/>
+              <!-- kliky, zrcátko, světla, mřížka -->
+              <path d="M246 116 h22 M340 116 h22"/>
+              <path d="M418 98 l18 -7 l5 11 l-16 4 Z"/>
+              <path d="M520 114 C540 117 552 122 559 131 L528 129 Z"/>
+              <path d="M60 113 L80 106 L82 126 L59 130 Z"/>
+              <path d="M538 160 h24 M542 166 h20"/>
               <!-- kola -->
-              <circle cx="110" cy="166" r="30"/><circle cx="110" cy="166" r="18"/><circle cx="110" cy="166" r="4"/>
-              <circle cx="370" cy="166" r="30"/><circle cx="370" cy="166" r="18"/><circle cx="370" cy="166" r="4"/>
+              <circle cx="135" cy="182" r="38"/><circle cx="135" cy="182" r="25"/><circle cx="135" cy="182" r="6"/>
+              <circle cx="455" cy="182" r="38"/><circle cx="455" cy="182" r="25"/><circle cx="455" cy="182" r="6"/>
             </g>
-            <!-- paprsky kol -->
-            <g stroke="currentColor" stroke-width="1.2" opacity=".7">
-              <path d="M110 148v-0 M110 166 L110 149 M110 166 L126 161 M110 166 L120 180 M110 166 L100 180 M110 166 L94 161"/>
-              <path d="M370 166 L370 149 M370 166 L386 161 M370 166 L380 180 M370 166 L360 180 M370 166 L354 161"/>
-            </g>
-            <!-- kótování: rozvor a osy -->
-            <g stroke="currentColor" stroke-width=".9" opacity=".55" fill="none">
-              <path d="M110 200 H370 M110 194 v12 M370 194 v12 M110 200 l7 -3 v6 Z M370 200 l-7 -3 v6 Z" />
-              <path d="M110 128 v76 M370 128 v76" stroke-dasharray="8 3 2 3"/>
-              <path d="M20 196 H460" opacity=".6"/>
+            <g fill="none" stroke="currentColor" stroke-width="1.3" opacity=".65">
+              <path d="M135 176 V158 M140 180 L157 174 M139 187 L149 202 M131 187 L121 202 M130 180 L113 174"/>
+              <path d="M455 176 V158 M460 180 L477 174 M459 187 L469 202 M451 187 L441 202 M450 180 L433 174"/>
             </g>
 
-            <!-- 01 promáčklina: přední blatník -->
+            <!-- 1: promáčklina na předním blatníku -->
             <g class="dmg" data-dmg="1">
-              <path class="dmg-area" d="M418 124 q10 -4 22 2 q6 10 2 22 q-12 6 -24 0 q-6 -12 0 -24Z"/>
-              <path class="dmg-hatch" d="M420 132 l14 -8 M419 140 l20 -12 M421 147 l20 -12 M428 150 l14 -8"/>
-              <circle class="dmg-ring" cx="430" cy="137" r="21"/>
-              <g class="dmg-tag" transform="translate(452 82)"><path d="M-12 32 L-2 8"/><circle r="11"/><text y="4">1</text></g>
+              <path d="M492 132 q14 -6 28 2 q6 14 0 28 q-16 6 -30 -2 q-4 -14 2 -28Z" fill="#ff8a7f" fill-opacity=".18"/>
+              <path d="M494 144 l18 -10 M492 154 l26 -15 M498 160 l22 -13" fill="none" stroke="#ff8a7f" stroke-width="1.8" stroke-linecap="round"/>
+              <circle class="dmg-ring" cx="506" cy="147" r="27" fill="none" stroke="#ff8a7f" stroke-width="1.8" stroke-dasharray="5 4"/>
+              <path d="M522 126 L556 70" fill="none" stroke="#ff8a7f" stroke-width="1.5"/>
+              <circle class="dmg-dot" cx="562" cy="60" r="13" fill="#ff8a7f"/>
+              <text x="562" y="65" fill="#14213d" font-family="Archivo, sans-serif" font-weight="800" font-size="15" text-anchor="middle">1</text>
             </g>
-            <!-- 02 poškrábaný lak: přední dveře -->
+            <!-- 2: poškrábaný lak na předních dveřích -->
             <g class="dmg" data-dmg="2">
-              <path class="dmg-scratch" d="M252 128 l10 4 l9 -3 l10 5 l9 -2 l10 4 l8 -2 M258 138 l12 3 l10 -2 l12 4 l10 -1"/>
-              <rect class="dmg-ring" x="244" y="120" width="78" height="28" rx="4"/>
-              <g class="dmg-tag" transform="translate(283 186)"><path d="M0 -11 L0 -38"/><circle r="11"/><text y="4">2</text></g>
+              <path d="M326 138 l12 4 l10 -3 l12 5 l10 -2 l12 4 l10 -2 M332 150 l14 3 l11 -2 l14 4 l12 -1" fill="none" stroke="#ff8a7f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect class="dmg-ring" x="316" y="128" width="96" height="32" rx="4" fill="none" stroke="#ff8a7f" stroke-width="1.8" stroke-dasharray="5 4"/>
+              <path d="M364 160 L364 222" fill="none" stroke="#ff8a7f" stroke-width="1.5"/>
+              <circle class="dmg-dot" cx="364" cy="234" r="13" fill="#ff8a7f"/>
+              <text x="364" y="239" fill="#14213d" font-family="Archivo, sans-serif" font-weight="800" font-size="15" text-anchor="middle">2</text>
             </g>
-            <!-- 03 koroze: zadní podběh -->
+            <!-- 3: rez na zadním podběhu -->
             <g class="dmg" data-dmg="3">
-              <g class="dmg-rust"><circle cx="146" cy="152" r="2.4"/><circle cx="152" cy="148" r="1.8"/><circle cx="141" cy="146" r="1.6"/><circle cx="150" cy="156" r="1.5"/><circle cx="156" cy="152" r="1.3"/><circle cx="144" cy="140" r="1.2"/><circle cx="138" cy="152" r="1.4"/></g>
-              <circle class="dmg-ring" cx="147" cy="149" r="15"/>
-              <g class="dmg-tag" transform="translate(178 128)"><path d="M-11 4 L-20 12"/><circle r="11"/><text y="4">3</text></g>
+              <g fill="#ffb36b"><circle cx="186" cy="160" r="2.8"/><circle cx="192" cy="154" r="2"/><circle cx="180" cy="152" r="1.8"/><circle cx="194" cy="164" r="1.7"/><circle cx="199" cy="157" r="1.5"/><circle cx="183" cy="145" r="1.4"/><circle cx="176" cy="160" r="1.6"/><circle cx="189" cy="168" r="1.3"/></g>
+              <circle class="dmg-ring" cx="188" cy="157" r="19" fill="none" stroke="#ff8a7f" stroke-width="1.8" stroke-dasharray="5 4"/>
+              <path d="M206 151 L236 128" fill="none" stroke="#ff8a7f" stroke-width="1.5"/>
+              <circle class="dmg-dot" cx="246" cy="120" r="13" fill="#ff8a7f"/>
+              <text x="246" y="125" fill="#14213d" font-family="Archivo, sans-serif" font-weight="800" font-size="15" text-anchor="middle">3</text>
             </g>
           </svg>
-          <ol class="dmg-legend" aria-label="Vyznačená poškození – klepněte pro zvýraznění na výkresu">
-            <li><button type="button" data-dmg="1" aria-pressed="false"><span class="dmg-no" aria-hidden="true">1</span><span><b>Promáčklý blatník</b> → oprava karoserie</span></button></li>
-            <li><button type="button" data-dmg="2" aria-pressed="false"><span class="dmg-no" aria-hidden="true">2</span><span><b>Poškrábaný lak na dveřích</b> → lakování</span></button></li>
-            <li><button type="button" data-dmg="3" aria-pressed="false"><span class="dmg-no" aria-hidden="true">3</span><span><b>Rez na podběhu</b> → odstranění koroze</span></button></li>
-          </ol>
+          <div class="dmg-legend" role="group" aria-label="Vyznačená poškození – klepněte pro zvýraznění na výkresu">
+            <button type="button" data-dmg="1" aria-pressed="false"><span class="dmg-no" aria-hidden="true">1</span><span><b>Promáčklý blatník</b> → oprava karoserie</span></button>
+            <button type="button" data-dmg="2" aria-pressed="false"><span class="dmg-no" aria-hidden="true">2</span><span><b>Poškrábaný lak na dveřích</b> → lakování</span></button>
+            <button type="button" data-dmg="3" aria-pressed="false"><span class="dmg-no" aria-hidden="true">3</span><span><b>Rez na podběhu</b> → odstranění koroze</span></button>
+          </div>
           <span class="dim dim-b" aria-hidden="true">pol. 02 · ilustrace</span>
         </div>
         <div class="svc-body">
@@ -463,6 +477,6 @@
 
 <a class="call-bar" id="call-bar" href="tel:+420725770943"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Zavolat 725&nbsp;770&nbsp;943</a>
 
-<script src="script.js?v=5"></script>
+<script src="script.js?v=6"></script>
 </body>
 </html>

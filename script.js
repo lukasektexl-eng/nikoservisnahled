@@ -156,14 +156,24 @@
     result.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
   });
 
-  /* ---------- Položka 02: propojení legendy a výkresu ---------- */
-  document.querySelectorAll('.dmg-legend li').forEach(li => {
-    const g = document.querySelector(`.car-bp .dmg[data-dmg="${li.dataset.dmg}"]`);
-    const on = () => { g.classList.add('hl'); li.classList.add('hl'); };
-    const off = () => { g.classList.remove('hl'); li.classList.remove('hl'); };
-    ['mouseenter', 'focus'].forEach(ev => li.addEventListener(ev, on));
-    ['mouseleave', 'blur'].forEach(ev => li.addEventListener(ev, off));
-    g.addEventListener('mouseenter', on); g.addEventListener('mouseleave', off);
+  /* ---------- Položka 02: propojení legendy a výkresu (hover i klepnutí) ---------- */
+  const dmgBtns = [...document.querySelectorAll('.dmg-legend button')];
+  const dmgG = n => document.querySelector(`.car-bp .dmg[data-dmg="${n}"]`);
+  let pinned = null;
+  const paint = hover => dmgBtns.forEach(btn => {
+    const n = btn.dataset.dmg, on = n === pinned || n === hover;
+    btn.classList.toggle('hl', on); dmgG(n).classList.toggle('hl', on);
+    btn.setAttribute('aria-pressed', String(n === pinned));
+  });
+  const pin = n => { pinned = pinned === n ? null : n; paint(null); };
+  dmgBtns.forEach(btn => {
+    const n = btn.dataset.dmg, g = dmgG(n);
+    btn.addEventListener('click', () => pin(n));
+    btn.addEventListener('mouseenter', () => paint(n));
+    btn.addEventListener('mouseleave', () => paint(null));
+    g.addEventListener('click', () => pin(n));
+    g.addEventListener('mouseenter', () => paint(n));
+    g.addEventListener('mouseleave', () => paint(null));
   });
 
   /* ---------- Mobilní lišta: schovat u objednávky a kontaktu ---------- */

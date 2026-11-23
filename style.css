@@ -370,11 +370,13 @@ legend+*{clear:both}
 .dmg-tag path{stroke:var(--c);stroke-width:1.4;fill:none}
 .dmg-tag circle{fill:var(--c);stroke:none;transition:r .2s}
 .dmg-tag text{fill:var(--navy);font:800 13px var(--display);text-anchor:middle}
+.dmg{cursor:pointer}
 .dmg.hl .dmg-ring{stroke-width:3;stroke-dasharray:none}
 .dmg.hl .dmg-tag circle{r:14}
 .dmg-legend{list-style:none;margin:0;padding:0;display:grid;gap:2px;width:100%;max-width:520px;align-self:center}
-.dmg-legend li{display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:2px;color:#d7e3f5;cursor:default;min-height:44px;font-size:.98rem;line-height:1.35}
-.dmg-legend li:hover,.dmg-legend li:focus-visible,.dmg-legend li.hl{background:rgba(255,255,255,.08)}
+.dmg-legend button{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:8px 10px;border:1px solid transparent;border-radius:2px;background:none;color:#d7e3f5;cursor:pointer;min-height:48px;font:inherit;font-size:.98rem;line-height:1.35}
+.dmg-legend button:hover,.dmg-legend button.hl{background:rgba(255,255,255,.08)}
+.dmg-legend button[aria-pressed="true"]{background:rgba(255,138,127,.16);border-color:rgba(255,138,127,.6)}
 .dmg-legend b{color:#fff;font-weight:600}
 .dmg-no{flex:none;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#ff8a7f;color:var(--navy);font:800 .8rem var(--display)}
 /* postupné objevení poškození */
@@ -385,5 +387,5 @@ legend+*{clear:both}
 .js-anim .car-bp.is-drawn .dmg[data-dmg="3"]{transition-delay:1.8s}
 @media (max-width:640px){
   .svc-draw-body{padding:44px 14px 40px}
-  .dmg-legend li{font-size:.92rem;padding:6px 6px}
+  .dmg-legend button{font-size:.92rem;padding:6px 6px}
 }

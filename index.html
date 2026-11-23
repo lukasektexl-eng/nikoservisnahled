@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -235,10 +235,10 @@
               <g class="dmg-tag" transform="translate(178 128)"><path d="M-11 4 L-20 12"/><circle r="11"/><text y="4">3</text></g>
             </g>
           </svg>
-          <ol class="dmg-legend" aria-label="Vyznačená poškození a co s nimi uděláme">
-            <li data-dmg="1" tabindex="0"><span class="dmg-no" aria-hidden="true">1</span><span><b>Promáčklý blatník</b> → oprava karoserie</span></li>
-            <li data-dmg="2" tabindex="0"><span class="dmg-no" aria-hidden="true">2</span><span><b>Poškrábaný lak na dveřích</b> → lakování</span></li>
-            <li data-dmg="3" tabindex="0"><span class="dmg-no" aria-hidden="true">3</span><span><b>Rez na podběhu</b> → odstranění koroze</span></li>
+          <ol class="dmg-legend" aria-label="Vyznačená poškození – klepněte pro zvýraznění na výkresu">
+            <li><button type="button" data-dmg="1" aria-pressed="false"><span class="dmg-no" aria-hidden="true">1</span><span><b>Promáčklý blatník</b> → oprava karoserie</span></button></li>
+            <li><button type="button" data-dmg="2" aria-pressed="false"><span class="dmg-no" aria-hidden="true">2</span><span><b>Poškrábaný lak na dveřích</b> → lakování</span></button></li>
+            <li><button type="button" data-dmg="3" aria-pressed="false"><span class="dmg-no" aria-hidden="true">3</span><span><b>Rez na podběhu</b> → odstranění koroze</span></button></li>
           </ol>
           <span class="dim dim-b" aria-hidden="true">pol. 02 · ilustrace</span>
         </div>
@@ -463,6 +463,6 @@
 
 <a class="call-bar" id="call-bar" href="tel:+420725770943"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Zavolat 725&nbsp;770&nbsp;943</a>
 
-<script src="script.js"></script>
+<script src="script.js?v=5"></script>
 </body>
 </html>

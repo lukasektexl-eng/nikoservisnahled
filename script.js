@@ -156,6 +156,16 @@
     result.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
   });
 
+  /* ---------- Položka 02: propojení legendy a výkresu ---------- */
+  document.querySelectorAll('.dmg-legend li').forEach(li => {
+    const g = document.querySelector(`.car-bp .dmg[data-dmg="${li.dataset.dmg}"]`);
+    const on = () => { g.classList.add('hl'); li.classList.add('hl'); };
+    const off = () => { g.classList.remove('hl'); li.classList.remove('hl'); };
+    ['mouseenter', 'focus'].forEach(ev => li.addEventListener(ev, on));
+    ['mouseleave', 'blur'].forEach(ev => li.addEventListener(ev, off));
+    g.addEventListener('mouseenter', on); g.addEventListener('mouseleave', off);
+  });
+
   /* ---------- Mobilní lišta: schovat u objednávky a kontaktu ---------- */
   const bar = document.getElementById('call-bar');
   if ('IntersectionObserver' in window) {

@@ -185,10 +185,62 @@
       </article>
 
       <article class="svc svc-rev">
-        <div class="svc-draw blueprint">
-          <svg class="drawing drawing-car" viewBox="0 0 260 130" role="img" aria-label="Nákres auta s vyznačeným poškozením karoserie"><use href="#car"/></svg>
+        <div class="svc-draw svc-draw-body blueprint">
           <span class="dim dim-a" aria-hidden="true">karoserie · lak · koroze</span>
-          <span class="dim dim-b" aria-hidden="true">pol. 02</span>
+          <svg class="drawing car-bp" viewBox="0 0 480 215" role="img" aria-labelledby="car-t">
+            <title id="car-t">Nákres auta z boku se třemi vyznačenými místy: promáčklina na předním blatníku, poškrábaný lak na předních dveřích a koroze na zadním podběhu</title>
+            <g class="draw" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+              <!-- karoserie -->
+              <path d="M40 160 L36 140 Q36 120 44 112 L108 103 Q130 84 156 72 Q170 66 190 65 L292 65 Q306 66 318 74 L356 100 L428 108 Q446 112 452 124 L456 146 Q456 158 448 160 L406 160 A36 36 0 0 0 334 160 L146 160 A36 36 0 0 0 74 160 Z"/>
+              <!-- okna -->
+              <path d="M120 102 Q138 86 160 76 Q172 72 186 72 L218 72 L218 102 Z"/>
+              <path d="M228 72 L290 72 Q302 73 312 80 L338 101 L228 102 Z"/>
+              <!-- linie dveří, práh, prolis -->
+              <path d="M223 72 L223 158 M342 103 L340 158 M136 104 Q132 130 142 158 M108 112 L452 120"/>
+              <!-- kliky, zrcátko, světla -->
+              <path d="M190 116 h16 M306 116 h16 M338 96 l14 -2 l2 8 l-12 1 Z M432 112 q14 2 18 12 l-14 -1 Z M38 122 l12 -1 l1 12 l-12 1 Z"/>
+              <!-- kola -->
+              <circle cx="110" cy="166" r="30"/><circle cx="110" cy="166" r="18"/><circle cx="110" cy="166" r="4"/>
+              <circle cx="370" cy="166" r="30"/><circle cx="370" cy="166" r="18"/><circle cx="370" cy="166" r="4"/>
+            </g>
+            <!-- paprsky kol -->
+            <g stroke="currentColor" stroke-width="1.2" opacity=".7">
+              <path d="M110 148v-0 M110 166 L110 149 M110 166 L126 161 M110 166 L120 180 M110 166 L100 180 M110 166 L94 161"/>
+              <path d="M370 166 L370 149 M370 166 L386 161 M370 166 L380 180 M370 166 L360 180 M370 166 L354 161"/>
+            </g>
+            <!-- kótování: rozvor a osy -->
+            <g stroke="currentColor" stroke-width=".9" opacity=".55" fill="none">
+              <path d="M110 200 H370 M110 194 v12 M370 194 v12 M110 200 l7 -3 v6 Z M370 200 l-7 -3 v6 Z" />
+              <path d="M110 128 v76 M370 128 v76" stroke-dasharray="8 3 2 3"/>
+              <path d="M20 196 H460" opacity=".6"/>
+            </g>
+
+            <!-- 01 promáčklina: přední blatník -->
+            <g class="dmg" data-dmg="1">
+              <path class="dmg-area" d="M418 124 q10 -4 22 2 q6 10 2 22 q-12 6 -24 0 q-6 -12 0 -24Z"/>
+              <path class="dmg-hatch" d="M420 132 l14 -8 M419 140 l20 -12 M421 147 l20 -12 M428 150 l14 -8"/>
+              <circle class="dmg-ring" cx="430" cy="137" r="21"/>
+              <g class="dmg-tag" transform="translate(452 82)"><path d="M-12 32 L-2 8"/><circle r="11"/><text y="4">1</text></g>
+            </g>
+            <!-- 02 poškrábaný lak: přední dveře -->
+            <g class="dmg" data-dmg="2">
+              <path class="dmg-scratch" d="M252 128 l10 4 l9 -3 l10 5 l9 -2 l10 4 l8 -2 M258 138 l12 3 l10 -2 l12 4 l10 -1"/>
+              <rect class="dmg-ring" x="244" y="120" width="78" height="28" rx="4"/>
+              <g class="dmg-tag" transform="translate(283 186)"><path d="M0 -11 L0 -38"/><circle r="11"/><text y="4">2</text></g>
+            </g>
+            <!-- 03 koroze: zadní podběh -->
+            <g class="dmg" data-dmg="3">
+              <g class="dmg-rust"><circle cx="146" cy="152" r="2.4"/><circle cx="152" cy="148" r="1.8"/><circle cx="141" cy="146" r="1.6"/><circle cx="150" cy="156" r="1.5"/><circle cx="156" cy="152" r="1.3"/><circle cx="144" cy="140" r="1.2"/><circle cx="138" cy="152" r="1.4"/></g>
+              <circle class="dmg-ring" cx="147" cy="149" r="15"/>
+              <g class="dmg-tag" transform="translate(178 128)"><path d="M-11 4 L-20 12"/><circle r="11"/><text y="4">3</text></g>
+            </g>
+          </svg>
+          <ol class="dmg-legend" aria-label="Vyznačená poškození a co s nimi uděláme">
+            <li data-dmg="1" tabindex="0"><span class="dmg-no" aria-hidden="true">1</span><span><b>Promáčklý blatník</b> → oprava karoserie</span></li>
+            <li data-dmg="2" tabindex="0"><span class="dmg-no" aria-hidden="true">2</span><span><b>Poškrábaný lak na dveřích</b> → lakování</span></li>
+            <li data-dmg="3" tabindex="0"><span class="dmg-no" aria-hidden="true">3</span><span><b>Rez na podběhu</b> → odstranění koroze</span></li>
+          </ol>
+          <span class="dim dim-b" aria-hidden="true">pol. 02 · ilustrace</span>
         </div>
         <div class="svc-body">
           <p class="svc-no" aria-hidden="true">Položka 02</p>
